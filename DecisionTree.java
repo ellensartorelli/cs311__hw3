@@ -22,19 +22,24 @@ public class DecisionTree {
 	
 	//The recursive train method that builds a tree at node
 	private void train(TreeNode node){
-		// pos = node.getPos??? same for neg
 		//find feature
 		int feature = getFeature(node);
+		//if a feature is found
 		if(feature != -1){
+			//set feature
 			node.setFeature(feature);
+			//create subchildren
 			createSubChildren(node);
+			//if the true child of current is not a leaf, train
 			if(!node.trueChild.isLeaf){
 				train(node.trueChild);
 			}
+			//if the false child of current is not leaf, train
 			if(!node.falseChild.isLeaf){
 				train(node.falseChild);
 			}
 		}else{
+			//else set final decision of leaf
 			node.setIsLeaf();
 			node.setDecision();
 		}
@@ -44,6 +49,8 @@ public class DecisionTree {
 	private int getFeature(TreeNode node){
 		double minRInfo = 1;
 		int minIndex = -1;
+		//for through array of features and for unused features, compute remaining info
+		//index of feature with lowest remaining info is saved to use as current feature
 		for(int i = 0; i < node.featuresUsed.length; i++){
 			if(!node.featuresUsed[i]){
 				double RInfo = getRemainingInfo(i, node);
@@ -59,6 +66,7 @@ public class DecisionTree {
 	//Creates the true and false children of node
 	private void createSubChildren(TreeNode node){
 		
+		//initailze children nodes
 		node.trueChild = new TreeNode();
 		node.falseChild = new TreeNode();
 
@@ -69,7 +77,6 @@ public class DecisionTree {
 		int feature = node.getFeature();
 		
 		//for true child:
-		
 		for(Example i : node.getPos()){
 			//for every example check feature we are looking at
 			//add to positive or negative
@@ -99,6 +106,8 @@ public class DecisionTree {
 		
 		Example[] false_positive = false_pos.toArray(new Example[false_pos.size()]);
 		Example[] false_negative = false_neg.toArray(new Example[false_neg.size()]);
+		
+		//set pos and neg for children
 		
 		node.falseChild.setPos(true_negative);
 		node.falseChild.setNeg(false_negative);
@@ -147,10 +156,10 @@ public class DecisionTree {
 		double hFalse = getEntropy(numNegT, numNegF);
 		
 		double totalCases = (numPosT+numNegT+numPosF+numNegF);
-		double totalSunny = numPosT+numPosF;
-		double totalRainy = totalCases - totalSunny;
+		double totalTrue = numPosT+numPosF;
+		double totalFalse = totalCases - totalTrue;
 				
-		rInfo = hTrue*(totalSunny/totalCases) + hFalse*(totalRainy/totalCases);
+		rInfo = hTrue*(totalTrue/totalCases) + hFalse*(totalFalse/totalCases);
 		
 		return rInfo;
 	}
