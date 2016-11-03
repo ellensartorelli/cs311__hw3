@@ -8,15 +8,15 @@ CS 311 Homework 3
     extra files besides those initially provided)**
 3. **No known bugs.**
 4. **Part 2 Discussion:**
-  * The tree classified patients first off
+  * The decision tree reveals to us that the most effective feature to use while classifying the diagnosis of a potential hepititus patient was varices, enlarged viens in the throat often linked to serious liver diseases. 
   * Positive examples correct: 38 out of 42 - about 90% correct, 4 false negatives
   - Negative examples correct: 7 out of 10 - about 70% correct, 3 false positives
 5. **Part 3 Discussion:**
   1. Zoo Data Set
   2. Data from University of California Irvine Machine Learning Repository
   3. c
-  4. 101 examples in the data set - 51 devoted to training, 50 devoted to testing
-  5. 15 features
+  4. 101 examples in the data set - 50 devoted to training, 51 devoted to testing
+  5. 14 features
 
   * The tree classified the predators first off
   * Positive examples correct: 38 out of 42 - about 90% correct, 4 false negatives
