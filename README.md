@@ -14,10 +14,10 @@ CS 311 Homework 3
 5. **Part 3 Discussion:**
   1. Zoo Data Set
   2. Data from University of California Irvine Machine Learning Repository
-  3. c
+  3. 
   4. 101 examples in the data set - 50 devoted to training, 51 devoted to testing
-  5. 14 features
+  5. 12 features
 
-  * The tree classified the predators first off
-  * Positive examples correct: 38 out of 42 - about 90% correct, 4 false negatives
-  - Negative examples correct: 7 out of 10 - about 70% correct, 3 false positives
+  * The tree classified the egg-layers off solely whether or not they produce milk.
+  * Positive examples correct: 31 out of 32 - about 97% correct, 1 false negatives
+  - Negative examples correct: 17 out of 19 - about 90% correct, 2 false positives
