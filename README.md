@@ -8,7 +8,9 @@ CS 311 Homework 3
     extra files besides those initially provided)**
 3. **No known bugs.**
 4. **Part 2 Discussion:**
-  * The decision tree reveals to us that the most effective feature to use while classifying the diagnosis of a potential hepititus patient was varices, enlarged viens in the throat often linked to serious liver diseases. 
+  * The decision tree shows the most effective feature to begin predicting a hepatitis patient's survival is checking for varices, enlarged viens in the throat often linked to serious liver diseases. If varices were absent, the resulting decision tree branch was quite conclusive, checking only one feature, histology, to detemine whether a patient survived.
+  On the other hand, if varices are present, we check out a myriad of features, the next being feature 19, "sgot gt 156," an indicator that levels of SGOT, an enzyme to linked to liver disease, are higher than 156. Normal levels for the enzyme range between 5 and 40. While checking SGOT provided more information than the other features, it wasn't totally conclusive as it branched out leaving multiple features  to be checked.
+  
   * Positive examples correct: 38 out of 42 - about 90% correct, 4 false negatives
   - Negative examples correct: 7 out of 10 - about 70% correct, 3 false positives
 5. **Part 3 Discussion:**
