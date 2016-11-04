@@ -14,7 +14,7 @@ CS 311 Homework 3
 5. **Part 3 Discussion:**
   1. Zoo Data Set
   2. Data from University of California Irvine Machine Learning Repository
-  3. 
+  3. This dataset describes basic information about animals. The features are binary and are as follow: hair, feathers, milk, airbone, aquatic, predator, toothed, backbone, breathes, venom, fins, tail and domestic. We are predicting whether or not an animal lays eggs.
   4. 101 examples in the data set - 50 devoted to training, 51 devoted to testing
   5. 12 features
 
