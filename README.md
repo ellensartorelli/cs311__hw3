@@ -18,6 +18,6 @@ CS 311 Homework 3
   4. 101 examples in the data set - 50 devoted to training, 51 devoted to testing
   5. 12 features
 
-  * The tree classified the egg-layers off solely whether or not they produce milk.
+  * In classifying whether or not a given animal lays eggs, our decision tree used the feature "milk" to most efficiently predict whether or not an animal lays eggs. The tree decided on "milk" as the root feature because it would provide the greatest information gain. In reality, all of the information that our tree needed to decide whether or not an animal layed eggs was provided in the "milk" feature during the training set, therefore our tree only had one branch. When we ran our tree on testing set it failed to perform with complete certainty because none of the animals that both lay eggs and produce milk (ie: playtus) were in the training set. Had we had a larger dataset with a full range of animals, we may have been able to increase the accurary of the tree.
   * Positive examples correct: 31 out of 32 - about 97% correct, 1 false negatives
   - Negative examples correct: 17 out of 19 - about 90% correct, 2 false positives
